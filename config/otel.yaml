@@ -1,0 +1,33 @@
+_format_version: "3.0"
+_info:
+  defaults: {}
+  select_tags:
+  - otel
+plugins:
+- config:
+    batch_flush_delay: 3
+    batch_span_count: 200
+    connect_timeout: 1000
+    endpoint: https://api.honeycomb.io/v1/traces
+    header_type: preserve
+    headers:
+      x-honeycomb-team: "{vault://hcv-kong-config/honeycomb/x-honeycomb-team}"
+    http_response_header_for_traceid: null
+    queue:
+      initial_retry_delay: 0.01
+      max_batch_size: 1
+      max_bytes: null
+      max_coalescing_delay: 1
+      max_entries: 10000
+      max_retry_delay: 60
+      max_retry_time: 60
+    read_timeout: 5000
+    resource_attributes: {}
+    send_timeout: 5000
+  enabled: true
+  name: opentelemetry
+  protocols:
+  - grpc
+  - grpcs
+  - http
+  - https
