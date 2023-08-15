@@ -1,0 +1,17 @@
+_format_version: "3.0"
+_info:
+  defaults: {}
+  select_tags:
+  - vault
+vaults:
+- config:
+    host: localhost
+    kv: v2
+    mount: secret
+    port: 8200
+    ttl: 60
+    protocol: http
+    token: <mytoken>
+  description: Storing secrets in HashiCorp Vault
+  name: hcv
+  prefix: hcv-kong-config

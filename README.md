@@ -43,6 +43,14 @@ docker-compose down
 
 ### Create Vault Entity
 
+Reference value in ```vault.example.yaml```
+
+This will create a vault entity in Kong,which contains information on how Kong can authenticate and retrieve secrets from Hashicorp Vault.
+
+```
+deck sync  --kong-addr=http://localhost:8001 -s config/vault.yaml
+```
+
 ```
 curl -i -X PUT http://localhost:8001/vaults/hcv-kong-config \
   --data name="hcv" \
