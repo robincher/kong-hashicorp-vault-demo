@@ -55,7 +55,7 @@ curl -i -X PUT http://localhost:8001/vaults/hcv-kong-config \
   --data config.token="<mytoken>"
 ```
 
-More configuration for Kong x HCV can be found here: https://docs.konghq.com/gateway/3.3.x/kong-enterprise/secrets-management/backends/hashicorp-vault/
+More configuration for Kong x HCV can be found here: https://docs.konghq.com/gateway/3.4.x/kong-enterprise/secrets-management/backends/hashicorp-vault/
 
 ### Put Secret in HCV
 

@@ -25,7 +25,7 @@ services:
       POSTGRES_DB: kong
 
   kong:
-    image: kong/kong-gateway:3.3.1.0
+    image: kong/kong-gateway:3.4
     container_name: kong-gateway
     command: sh -c "kong migrations bootstrap && kong start"
     ports:
