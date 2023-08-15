@@ -59,7 +59,7 @@ More configuration for Kong x HCV can be found here: https://docs.konghq.com/gat
 http --quiet $VAULT_URL/v1/<mount>/data/honeycomb 'data:={"key":"value"}' X-Vault-Token:<mytoken>
 ```
 
-### Create Demo Service and Route
+### Create Demo Service and Route (Optional)
 
 ```
 http :8001/services url=https://mockbin.org/request name=ot-demo
