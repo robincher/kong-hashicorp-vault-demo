@@ -51,18 +51,6 @@ This will create a vault entity in Kong,which contains information on how Kong c
 deck sync  --kong-addr=http://localhost:8001 -s config/vault.yaml
 ```
 
-```
-curl -i -X PUT http://localhost:8001/vaults/hcv-kong-config \
-  --data name="hcv" \
-  --data description="Storing secrets in HashiCorp Vault" \
-  --data config.protocol="http" \
-  --data config.host="vault" \
-  --data config.port="8200" \
-  --data config.mount="<mount>" \
-  --data config.kv="v2" \
-  --data config.token="<mytoken>"
-```
-
 More configuration for Kong x HCV can be found here: https://docs.konghq.com/gateway/3.4.x/kong-enterprise/secrets-management/backends/hashicorp-vault/
 
 ### Put Secret in HCV
